@@ -1,0 +1,15 @@
+--- 
+services: 
+  app: 
+    image: "surya1150/bootcamp/spring-demo-app:latest"
+    ports: 
+      - "8082:8080"
+  db: 
+    environment: 
+      MYSQL_DATABASE: test_db
+      MYSQL_ROOT_PASSWORD: root
+    image: mysql
+    ports: 
+      - "3307:3306"
+    restart: always
+version: "3.1"
