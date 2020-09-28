@@ -6,6 +6,6 @@ EXPOSE 8080
 ARG JAR_FILE=/target/*.jar
 
 #COPY ${WAR_FILE} /usr/local/tomcat/webapps/app.jar
-COPY ${JAR_FILE} app.war
+COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
 #CMD ["catalina.sh", "run"]  
